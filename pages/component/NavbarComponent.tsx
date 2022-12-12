@@ -63,8 +63,8 @@ function NavbarComponent(){
             lg: 'none'
         }}
             minWidth='max-content' height={{
-                sm: '100%',
-                md: '100%',
+                sm: '90%',
+                md: '90%',
                 lg: '4rem'
             }} gap='2' justify='space-between' direction={['column', 'column', 'row', 'row']}
         >
