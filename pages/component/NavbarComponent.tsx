@@ -4,7 +4,6 @@ import Image from 'next/image'
 export default function AboutComponent(){
     return (
         <Flex my='10rem' mx='auto' direction='column' bg='#101010' w={{
-            base: '300px',
             sm: '300px',
             md: '400px',
             lg: '700px'
