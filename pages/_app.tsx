@@ -5,10 +5,7 @@ import NavbarComponent from './component/NavbarComponent';
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-      <ChakraProvider theme={{
-        initialColorMode: 'dark',
-        useSystemColorMode: false,
-      }}>
+      <ChakraProvider>
         <ColorModeScript initialColorMode={'dark'}></ColorModeScript>
         <NavbarComponent></NavbarComponent>
         <Component {...pageProps} />
