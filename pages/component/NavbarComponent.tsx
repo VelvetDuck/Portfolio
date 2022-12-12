@@ -5,9 +5,9 @@ export default function AboutComponent(){
     return (
         <Flex my='10rem' mx='auto' direction='column' bg='#101010' w={{
             base: '300px',
-            sm: '400px',
-            md: '500px',
-            lg: '800px'
+            sm: '300px',
+            md: '400px',
+            lg: '700px'
         }} h='30rem' alignItems={{
             sm: 'center'
         }}>
