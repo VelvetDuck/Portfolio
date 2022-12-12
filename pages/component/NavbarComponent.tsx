@@ -99,7 +99,10 @@ function NavbarComponent(){
             {
                 isMobile === true ? 
                 <Flex display={{
-
+                    base: 'flex',
+                    sm: 'flex',
+                    md: 'flex',
+                    lg: 'none'
                 }} width='50%' height='100%' direction='column' my='5rem' alignItems='center'>
                     {addNavItems(true)}
                 </Flex>
