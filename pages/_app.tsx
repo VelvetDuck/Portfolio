@@ -4,7 +4,6 @@ import {ColorModeScript} from '@chakra-ui/color-mode'
 import NavbarComponent from './component/NavbarComponent';
 
 import theme from './theme';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 export default function App({ Component, pageProps }: AppProps) {
