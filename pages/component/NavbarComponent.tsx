@@ -88,11 +88,7 @@ function NavbarComponent(){
             </Flex>
             {
                 isMobile ? 
-                <Flex display={{
-                    sm: 'flex',
-                    md: 'flex',
-                    lg: 'none'
-                }} width='100%' height='100%' direction='column' my='5rem' alignItems='center'>
+                <Flex display={['flex', 'flex', 'none', 'none']} width='100%' height='100%' direction='column' my='5rem' alignItems='center'>
                     {addNavItems(true)}
                 </Flex>
                 :  <Flex display={{
