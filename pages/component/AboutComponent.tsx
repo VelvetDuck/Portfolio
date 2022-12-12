@@ -4,8 +4,8 @@ import Image from 'next/image'
 export default function AboutComponent(){
     return (
         <Flex my='10rem' mx='auto' direction='column' bg='#101010' w={{
-            base: '200px',
-            sm: '300px',
+            base: '300px',
+            sm: '350px',
             md: '400px',
             lg: '700px'
         }} h='30rem' alignItems={{
