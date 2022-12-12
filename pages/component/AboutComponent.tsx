@@ -9,6 +9,7 @@ export default function AboutComponent(){
             md: '400px',
             lg: '700px'
         }} h='30rem' alignItems={{
+            base: 'center',
             sm: 'center'
         }}>
             <Image width={150} height={150} style={{
