@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export default function AboutComponent(){
     return (
-        <Flex my='10rem' mx='auto' direction='column' bg='#101010' w={{
+        <Flex my='10rem' mx='auto' direction='column' borderRadius='8px' bg='#101010' w={{
             base: '300px',
             sm: '350px',
             md: '400px',
@@ -28,9 +28,7 @@ export default function AboutComponent(){
                 md: '17px',
                 lg: '20px'
             }}
-            >Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Natus, totam sint voluptatem est voluptates rem perferendis neque veniam quod iusto esse dolore culpa,
-            necessitatibus non quidem vel maxime similique reiciendis?</Text>
+            >This is my Portfolio website that shows all my knowledge.</Text>
         </Flex>
     );
 }
