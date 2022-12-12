@@ -66,11 +66,7 @@ function NavbarComponent(){
                 sm: '100%',
                 md: '100%',
                 lg: '4rem'
-            }} gap='2' justify='space-between' direction={{
-                sm: 'column',
-                md: 'column',
-                lg: 'row'
-            }}
+            }} gap='2' justify='space-between' direction={['column', 'column', 'row', 'row']}
         >
 
             <Heading display='flex' mx='3' as='h2' justifyContent='space-between'>
