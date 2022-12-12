@@ -65,9 +65,9 @@ function NavbarComponent(){
             lg: 'none'
         }}
             minWidth='max-content' height={{
-                base: '100%',
-                sm: '100%',
-                md: '100%',
+                base: 'auto',
+                sm: 'auto',
+                md: 'auto',
                 lg: '4rem'
             }} gap='2' justify='space-between' direction={{
                 base: 'column',
@@ -104,9 +104,9 @@ function NavbarComponent(){
                     {addNavItems(true)}
                 </Flex>
                 :  <Flex display={{
-                    base: 'flex',
-                    sm: 'flex',
-                    md: 'flex',
+                    base: 'none',
+                    sm: 'none',
+                    md: 'none',
                     lg: 'none'
                 }} width='100%' height='100%' direction='column' my='5rem' alignItems='center'>
                 {addNavItems(true)}
