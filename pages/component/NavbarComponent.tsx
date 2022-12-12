@@ -97,17 +97,17 @@ function NavbarComponent(){
                 {addNavItems(false)}
             </Flex>
             {
-                isMobile ? 
+                isMobile === true ? 
                 <Flex display={{
 
-                }} width='100%' height='100%' direction='column' my='5rem' alignItems='center'>
+                }} width='50%' height='100%' direction='column' my='5rem' alignItems='center'>
                     {addNavItems(true)}
                 </Flex>
                 :  <Flex display={{
                     base: 'none',
                     sm: 'none',
                     md: 'none',
-                    lg: 'none'
+                    lg: 'flex'
                 }} width='100%' height='100%' direction='column' my='5rem' alignItems='center'>
                 {addNavItems(true)}
             </Flex>
