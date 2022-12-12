@@ -88,7 +88,12 @@ function NavbarComponent(){
             }}>Test</IconButton>    
             </Heading>
 
-            <Flex justify='flex-end' alignItems='center' gap='5' mx='3rem' display={['none', 'none', 'none', 'flex']}width='90%' height='100%'>
+            <Flex justify='flex-end' alignItems='center' gap='5' mx='3rem' display={{
+                base: 'none',
+                sm: 'none',
+                md: 'none',
+                lg: 'flex'
+            }} width='90%' height='100%'>
                 {addNavItems(false)}
             </Flex>
             {
@@ -99,9 +104,9 @@ function NavbarComponent(){
                     {addNavItems(true)}
                 </Flex>
                 :  <Flex display={{
-                    base: 'none',
-                    sm: 'none',
-                    md: 'none',
+                    base: 'flex',
+                    sm: 'flex',
+                    md: 'flex',
                     lg: 'none'
                 }} width='100%' height='100%' direction='column' my='5rem' alignItems='center'>
                 {addNavItems(true)}
