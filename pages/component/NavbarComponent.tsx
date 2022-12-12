@@ -103,7 +103,7 @@ function NavbarComponent(){
                     sm: 'flex',
                     md: 'flex',
                     lg: 'none'
-                }} width='50%' height='100%' direction='column' my='5rem' alignItems='center'>
+                }} width='100%' height='100%' alignItems='center' direction='column' my='5rem'>
                     {addNavItems(true)}
                 </Flex>
                 :  <Flex display={{
