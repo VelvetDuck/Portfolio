@@ -1,103 +1,33 @@
-import { Link, Box, Flex, Text, Heading, Button, ButtonGroup, Stack } from "@chakra-ui/react"
-import NextLink from "next/link"
-import { IconButton } from "@chakra-ui/react"
-import { InfoIcon, ChatIcon, CheckIcon, HamburgerIcon } from "@chakra-ui/icons"
-import React, {useState} from 'react'
+import { Flex, Text } from "@chakra-ui/react";
+import Image from 'next/image'
 
-class NavItem {
-    private text: string;
-    private href: string;
-    private icon: any;
-    private mobile: boolean;
-
-    public getText() : string { return this.text; }
-    public getHref() : string { return this.href; }
-    public getIcon() : any { return this.icon; }
-    public isMobile() : boolean { return this.mobile; }
-    
-    public build() : any {
-        return this.isMobile() ? <NextLink href={this.getHref()} passHref>
-           <Button my='5' width='250px'>
-            {this.getText()}
-           </Button>
-        </NextLink> :
-        <NextLink href={this.getHref()} passHref>
-           <Button>
-            {this.getText()}
-           </Button>
-        </NextLink>
-    }
-
-    constructor(text: string, href: string, icon : any, isMobile : boolean){
-        this.text = text;
-        this.href = href;
-        this.icon = icon;
-        this.mobile = isMobile;
-    }
-}
-
-function addNavItems(isMobile : boolean) : any{
-    return [
-        new NavItem('home', '/home',<></>, isMobile).build(),
-        new NavItem('about', '/about',<InfoIcon/>, isMobile).build(),
-        new NavItem('contact', '/contact',<ChatIcon/>, isMobile).build(),
-        new NavItem('projects', '/projects',<CheckIcon/>, isMobile).build()
-    ]
-}
-
-function NavbarComponent(){
-
-    const [isMobile, setMobile] = useState<boolean>(false);
-
+export default function AboutComponent(){
     return (
-        <Flex alignItems={{
-            lg: 'center'
-        }} backgroundColor={ isMobile === true ? {
-            sm: 'black',
-            md: 'none',
-            lg: 'none'
-        } :
-        {
-            sm: 'none',
-            md: 'none',
-            lg: 'none'
-        }}
-            minWidth='max-content' height={{
-                basic: '100%',
-                sm: '100%',
-                md: '100%',
-                lg: '4rem'
-            }} gap='2' justify='space-between' direction={['column', 'column', 'row', 'row']}
-        >
-
-            <Heading display='flex' mx='3' as='h2' justifyContent='space-between'>
-                Portfolio
-
-            <IconButton onClick={() => setMobile(!isMobile)} my='1' icon={<HamburgerIcon />} aria-label='show or hide nav for mobiles'  display={{
-                sm: 'flex',
-                md: 'flex',
-                lg: 'none'
-            }}>Test</IconButton>    
-            </Heading>
-
-            <Flex justify='flex-end' alignItems='center' gap='5' mx='3rem' display={['none', 'none', 'none', 'flex']}width='90%' height='100%'>
-                {addNavItems(false)}
-            </Flex>
-            {
-                isMobile ? 
-                <Flex display={['flex', 'flex', 'none', 'none']} width='100%' height='100%' direction='column' my='5rem' alignItems='center'>
-                    {addNavItems(true)}
-                </Flex>
-                :  <Flex display={{
-                    sm: 'none',
-                    md: 'none',
-                    lg: 'none'
-                }} width='100%' height='100%' direction='column' my='5rem' alignItems='center'>
-                {addNavItems(true)}
-            </Flex>
-            }
+        <Flex my='10rem' mx='auto' direction='column' bg='#101010' w={{
+            base: '300px',
+            sm: '400px',
+            md: '500px',
+            lg: '800px'
+        }} h='30rem' alignItems={{
+            sm: 'center'
+        }}>
+            <Image width={150} height={150} style={{
+                borderRadius: '50%',
+                marginTop: '30px'
+            }}alt='alt' src='/userAvatar.jpg'></Image>
+            <Text fontSize={{
+                sm: '20px',
+                md: '30px'
+            }} px='5' my='10' as='h2' color='white' textAlign='center'>Hello!</Text>
+            <Text w='80%' color='white' my='auto'
+            fontSize={{
+                sm: '15px',
+                md: '17px',
+                lg: '20px'
+            }}
+            >Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Natus, totam sint voluptatem est voluptates rem perferendis neque veniam quod iusto esse dolore culpa,
+            necessitatibus non quidem vel maxime similique reiciendis?</Text>
         </Flex>
     );
 }
-
-export default NavbarComponent;
