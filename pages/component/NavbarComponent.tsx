@@ -69,13 +69,19 @@ function NavbarComponent(){
                 sm: '100%',
                 md: '100%',
                 lg: '4rem'
-            }} gap='2' justify='space-between' direction={['column', 'column', 'row', 'row']}
+            }} gap='2' justify='space-between' direction={{
+                base: 'column',
+                sm: 'column',
+                md: 'column',
+                lg: 'row'
+            }}
         >
 
             <Heading display='flex' mx='3' as='h2' justifyContent='space-between'>
                 Portfolio
 
             <IconButton onClick={() => setMobile(!isMobile)} my='1' icon={<HamburgerIcon />} aria-label='show or hide nav for mobiles'  display={{
+                base: 'flex',
                 sm: 'flex',
                 md: 'flex',
                 lg: 'none'
