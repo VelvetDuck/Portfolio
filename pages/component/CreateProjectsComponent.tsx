@@ -1,14 +1,16 @@
 import { Box, Button, Heading, Text, SimpleGrid, Center} from "@chakra-ui/react";
+import { InfoIcon } from "@chakra-ui/icons";
 import Link from "next/link";
+import Image from 'next/image';
 
 class CreatedProject {
     private projectName : string;
     private projectDescription : string;
     private projectURL : string;
-    private projectOptionalImage : string;
+    private projectOptionalImage : any;
 
     public constructor(projectName : string, projectDescription : string,
-        projectURL : string, projectOptionalImage : string){
+        projectURL : string, projectOptionalImage : any){
             this.projectDescription = projectDescription;
             this.projectURL = projectURL;
             this.projectOptionalImage = projectOptionalImage;
@@ -27,7 +29,7 @@ class CreatedProject {
             return this.projectURL;
         }
 
-        public getProjectOptionalImage(): string {
+        public getProjectOptionalImage(): any {
             return this.projectOptionalImage
         }
 
@@ -36,7 +38,7 @@ class CreatedProject {
 
 function createProjectCard(project : CreatedProject) : any {
     return (
-        <Box backgroundColor='#101010' mx='auto' alignItems='center'
+        <Box borderRadius='8px' backgroundColor='#101010' mx='auto' alignItems='center'
             width={{
                 base: '350px',
                 sm: '400px',
@@ -49,6 +51,7 @@ function createProjectCard(project : CreatedProject) : any {
                 md: '400px',
                 lg: '450px'
             }}>
+                
             <Heading as='h2' padding={4} textAlign='center'
             fontSize={{
                 base: '24px',
@@ -64,10 +67,13 @@ function createProjectCard(project : CreatedProject) : any {
                 lg: '28px'
             }}>{project.getDescription()}</Text>
             
+            {project.getProjectOptionalImage()}
+
             <Center>
-                <Button mt='120px' 
+
+                <Button mt='5'
                 width={{
-                    base: '70px',
+                    base: '100px',
                     sm: '120px',
                     md: '140px',
                     lg: '190px'
@@ -97,12 +103,16 @@ function setupProjectCards(){
         Array.of(
             new CreatedProject('Portfolio Project',
             'This is a portfolio project, made for a great look for me.',
-            'none',
-            'none'),
-            new CreatedProject('Functionable',
-            'Simple discord bot, that is written in Java, and some new tools.',
-            'none',
-            'none')
+            'https://github.com/VelvetDuck/Portfolio',
+            <Center>
+                <Image alt='alt' src='/body-text.svg' width={128} height={128}></Image>
+            </Center>),
+            new CreatedProject('Discordia',
+            'A simple, helpful, multithreaded discord application written in Java.',
+            'https://github.com/VelvetDuck/Portfolio',
+            <Center>
+                <Image alt='alt' src='/brand-discord.svg' width={128} height={128}></Image>
+            </Center>)
         )
     )
 }
