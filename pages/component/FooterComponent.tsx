@@ -34,7 +34,7 @@ function FooterComponent(){
                     </Box>
                 </SimpleGrid>
             </Center>
-            <Center textAlign='center'><Text mt='4' size='lg' width='40%' color='white'>All creadits to Next.js. Website made by WhiteClawConeseur AKA VelvetDuck.</Text></Center>
+            <Center textAlign='center'><Text mt='4' size='lg' width='40%' color='white'>All credits to Next.js. Website made by WhiteClawConeseur AKA VelvetDuck.</Text></Center>
         </Flex>
     );
 }
