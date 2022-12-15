@@ -30,7 +30,7 @@ function ContactComponent(){
 
     return (
         <Center>
-            <Flex direction='column' w='80%' my='20' backgroundColor='#101010' borderRadius='8px'>
+            <Flex id='contact' direction='column' w='80%' my='20' backgroundColor='#101010' borderRadius='8px'>
                 <FormControl padding="10">
                     <Heading as='h2'>Contact with us!</Heading>
                         <FormLabel>Email address</FormLabel>

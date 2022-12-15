@@ -38,10 +38,9 @@ class NavItem {
 
 function addNavItems(isMobile : boolean) : any{
     return [
-        new NavItem('home', '/home',<></>, isMobile).build(),
-        new NavItem('about', '/about',<InfoIcon/>, isMobile).build(),
-        new NavItem('contact', '/contact',<ChatIcon/>, isMobile).build(),
-        new NavItem('projects', '/projects',<CheckIcon/>, isMobile).build()
+        new NavItem('home', '/#home',<></>, isMobile).build(),
+        new NavItem('contact', '/#contact',<ChatIcon/>, isMobile).build(),
+        new NavItem('projects', '/#projects',<CheckIcon/>, isMobile).build()
     ]
 }
 

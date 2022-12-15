@@ -7,7 +7,7 @@ import ContactComponent from './component/ContactComponent';
 export default function Home() {
   return (
     <>
-      <AboutComponent></AboutComponent>
+      <AboutComponent ></AboutComponent>
       <CreateProjectsComponent></CreateProjectsComponent>
       <ContactComponent></ContactComponent>
       <FooterComponent></FooterComponent>

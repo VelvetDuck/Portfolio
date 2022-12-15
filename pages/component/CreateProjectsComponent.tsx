@@ -38,7 +38,7 @@ class CreatedProject {
 
 function createProjectCard(project : CreatedProject) : any {
     return (
-        <Box borderRadius='8px' backgroundColor='#101010' mx='auto' alignItems='center'
+        <Box  borderRadius='8px' backgroundColor='#101010' mx='auto' alignItems='center'
             width={{
                 base: '350px',
                 sm: '400px',
@@ -119,7 +119,7 @@ function setupProjectCards(){
 
 function CreateProjectsComponent(){
     return (
-        <SimpleGrid columns={{
+        <SimpleGrid id='projects' columns={{
             base: 1,
             sm: 1,
             md: 2,
