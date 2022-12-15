@@ -82,7 +82,7 @@ function ContactComponent(){
                                 var name : string = firstName;
 
 
-                                let context : string = ;
+                                let context : string = `Hey, I want to ask you about: ${optionFor}. My email is: ${email}. Please respond to me.`;
                                 let contextTitle : string = `Generated email from portfolio website: Firstname: ${name}`;
 
 
